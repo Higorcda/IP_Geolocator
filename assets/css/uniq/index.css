@@ -1,0 +1,161 @@
+
+div#ipgeolocator
+{
+
+    height          :  120vh;
+    display         :   flex;
+    justify-content : center;
+    align-items     : center;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center
+{
+
+    background-color :             var(--s-dark-background);
+    border-bottom    :   3px solid var(--t-dark-background);
+    box-shadow       : 0px 0px 3px var(--s-dark-background);
+    border-radius    :                                  5px;
+    padding          :                  15px 25px 25px 25px;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate
+{
+
+    display         :   flex;
+    justify-content : center;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form label
+{
+
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.6;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form label span { color: var(--main-color); }
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form input
+{
+
+    display          :                                block;
+    outline          :                                 none;
+    border           :                                 none;
+    width            :                                300px;
+    height           :                                 40px;
+    padding          :                             0px 10px;
+    background-color :             var(--f-dark-background);
+    border-bottom    :   2px solid var(--t-dark-background);
+    box-shadow       : 0px 0px 3px var(--f-dark-background);
+    border-radius    :                                  5px;
+    font-size        :                                  9pt;
+    color            :                    var(--text-color);
+    margin           :                              8px 0px;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form button
+{
+
+    display       :                         block;
+    outline       :                          none;
+    border        :                          none;
+    padding       :                      4px 14px;
+    height        :                          35px;
+    background    :                          none;
+    box-shadow    : 0px 0px 3px var(--main-color);
+    border-radius :                           5px;
+    font-size     :                           9pt;
+    color         :             var(--text-color);
+    opacity       :                           0.8;
+    margin        :            30px auto 0px auto;
+    cursor        :                       pointer;
+    transition    :                          0.6s;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form button:hover { background-color: var(--main-color); }
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geolocate form button i 
+{
+
+    margin-right : 8px;
+    opacity      : 0.6;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geo
+{
+
+    background-color :             var(--f-dark-background);
+    border-bottom    :   3px solid var(--t-dark-background);
+    box-shadow       : 0px 0px 3px var(--f-dark-background);
+    border-radius    :                                  5px;
+    padding          :                                 15px;
+    margin-top       :                                 50px;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geo div.ipgeolocator__center-geo__item
+{
+
+    display         :          flex;
+    align-items     :        center;
+    justify-content : space-between;
+    width           :         400px;
+    margin          :      20px 0px;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geo div.ipgeolocator__center-geo__item div.ipgeolocator__center-geo__item-info
+{
+
+    display     :   flex;
+    align-items : center;
+    gap         :    8px;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geo div.ipgeolocator__center-geo__item div.ipgeolocator__center-geo__item-info span
+{
+
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.8;
+
+}
+
+div#ipgeolocator main#ipgeolocator__center div#ipgeolocator__center-geo div.ipgeolocator__center-geo__item span.ipgeolocator__center-geo__item-value
+{
+
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.6;
+
+}
+
+div#failure
+{
+
+    max-width        :                               1000px;
+    padding          :                            10px 20px;
+    background-color :             rgba(247, 56, 56, 0.6);
+    border           :   2px solid var(--t-dark-background);
+    box-shadow       : 0px 0px 3px var(--t-dark-background);
+    border-radius    :                                  5px;
+    margin           :                   25px auto 0px auto;
+
+}
+
+div#failure p 
+{
+
+    font-size  :               9pt;
+    color      : var(--text-color);
+    text-align :            center;
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalizador de IP</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/uniq/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    {{#if failure}}
+
+        <div id="failure"><p>{{failure}}</p></div> 
+
+    {{/if}}
+
+    <div id="ipgeolocator">
+        <main id="ipgeolocator__center">
+
+            <div id="ipgeolocator__center-geolocate">
+
+                <form action="/geolocate" method="post">
+                    <label for="ip_address_field_id"><span>*</span> Endereço IP</label>
+                    <input type="text" name="ip_address" id="ip_address_field_id" placeholder="Endereço IP">
+
+                    <button type="submit" name="submit_button"><i class="fa-solid fa-earth-americas"></i>Clique para Geolocalizar</button>
+                </form>
+
+            </div>
+
+            {{#if ip_infos}}
+
+                <div id="ipgeolocator__center-geo">
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/ip_address.png" alt="Endereço IP"><span>Endereço IP</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.ip_address}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/country.png" alt="País"><span>País</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.country}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/city_and_region.png" alt="Cidade e Estado"><span>Cidade&Estado</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.city_and_state}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/latitude.png" alt="Latitude"><span>Latitude</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.latitude}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/longitude.png" alt="Longitude"><span>Longitude</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.longitude}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/isp.png" alt="Provedor de Internet"><span>ISP</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.isp}}</span>
+                    </div>
+
+                    <div class="ipgeolocator__center-geo__item">
+                        <div class="ipgeolocator__center-geo__item-info">
+                            <img src="/images/ip_info_icons/proxy.png" alt="Proxy"><span>Proxy</span>
+                        </div>
+
+                        <span class="ipgeolocator__center-geo__item-value">{{ip_infos.proxy}}</span>
+                    </div>
+
+                </div>
+
+            {{/if}}
+
+        </main>
+    </div>
+    
+</body>
+</html>
