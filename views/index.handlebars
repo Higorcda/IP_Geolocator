@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IP Geolocator</title>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    {{#if failure}} <div id="system_failure"><p>{{failure}}</p></div> {{/if}}
+
+    <section id="geolocator">
+        <main id="geolocator__main">
+
+            <div id="geolocator__main-geolocate">
+                <div id="geolocator__main-geolocate__center">
+
+                    <form action="/geolocate" method="post">
+
+                        {{#if form_error}}
+
+                            <div id="geolocator__main-geolocate__center-form__failure">
+                                <div id="geolocator__main-geolocate__center-form__failure-center"><p>{{form_error}}</p></div>
+                            </div>
+
+                        {{/if}}
+
+                        <label for="ip_address_field_id">IP Address</label>
+
+                        <div id="geolocator__main-geolocate__center-form__main">
+                            <input type="text" name="ip_address" id="ip_address_field_id" placeholder="IP Address">
+                            <button type="submit"><i class="fa-solid fa-earth-americas"></i>Geolocate</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            {{#if geolocated}}
+
+                <div id="geolocator__main-infos">
+                    <div id="geolocator__main-infos__center">
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/ip_address.png" alt="IP Address" title="IP Address"></div>
+
+                            <p>{{ip_address}}</p>
+                        </div>
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/country.png" alt="Country" title="Country"></div>
+
+                            <p>{{country}}</p>
+                        </div>
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/city_and_region.png" alt="City and Region" title="City and Region"></div>
+
+                            <p>{{city_and_region}}</p>
+                        </div>
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/latitude.png" alt="Latitude" title="Latitude"></div>
+
+                            <p>{{latitude}}</p>
+                        </div>
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/longitude.png" alt="Longitude" title="Longitude"></div>
+
+                            <p>{{longitude}}</p>
+                        </div>
+
+                        <div class="geolocator__main-infos__center-info">
+                            <div class="geolocator__main-infos__center-info__icon"><img src="/images/isp.png" alt="Internet Provider" title="Internet Provider"></div>
+
+                            <p>{{isp}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            
+            {{/if}}
+
+        </main>
+    </section>
+    
+</body>
+</html>

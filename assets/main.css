@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root 
+{
+
+    --main-color      : #6914fb;
+    --dark-main-color : #4b0db8;
+
+    --text-color      : #f5f5f5;
+
+    --f-dark          : #020202;
+    --s-dark          : #121212;
+    --t-dark          : #222222;
+
+    --failure         : #f45f5f;
+
+}
+
+* 
+{
+
+    margin      :                   0px;
+    padding     :                   0px;
+    font-family : 'Poppins', sans-serif;
+    box-sizing  :            border-box;
+
+}
+
+body { background-color: var(--f-dark); }
+
+section#geolocator 
+{
+
+    height          :  100vh;
+    display         :   flex;
+    justify-content : center;
+    align-items     : center;
+
+}
+
+section#geolocator main#geolocator__main 
+{
+
+    padding          :                      25px;
+    background-color :             var(--s-dark);
+    box-shadow       : 0px 0px 3px var(--s-dark);
+    border-radius    :                       3px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate 
+{
+
+    display         :   flex;
+    justify-content : center;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center 
+{
+
+    padding          :       15px 25px 25px 25px;
+    background-color :             var(--f-dark);
+    box-shadow       : 0px 0px 3px var(--f-dark);
+    border-radius    :                       3px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__failure 
+{
+
+    display         :   flex;
+    justify-content : center;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__failure div#geolocator__main-geolocate__center-form__failure-center 
+{
+
+    padding          :                  10px 20px;
+    width            :                      300px;
+    background-color :   rgba(244, 95, 95, 0.6);
+    box-shadow       : 0px 0px 3px var(--failure);
+    border-radius    :                        3px;
+    margin           :          10px 0px 30px 0px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__failure div#geolocator__main-geolocate__center-form__failure-center p 
+{
+
+    font-size  :               9pt;
+    color      : var(--text-color);
+    text-align :            center;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form label 
+{
+
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.6;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main
+{
+
+    display     :   flex;
+    gap         :   30px;
+    align-items : center;
+    margin-top  :    8px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main input,
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main button 
+{
+
+    outline   :              none;
+    border    :              none;
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.8;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main input 
+{
+
+    padding-left     :                      10px;
+    width            :                     300px;
+    height           :                      40px;
+    background-color :             var(--t-dark);
+    box-shadow       : 0px 0px 3px var(--t-dark);
+    border-radius    :                       3px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main button 
+{
+
+    padding          :                      0px 16px;
+    height           :                          40px;
+    background-color :             var(--main-color);
+    box-shadow       : 0px 0px 3px var(--main-color);
+    border-radius    :                         200px;
+    cursor           :                       pointer;
+    transition       :                          0.6s;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main button i 
+{
+
+    margin-right : 8px;
+    opacity      : 0.6;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-geolocate div#geolocator__main-geolocate__center form div#geolocator__main-geolocate__center-form__main button:hover 
+{
+
+    background-color :             var(--dark-main-color);
+    box-shadow       : 0px 0px 3px var(--dark-main-color);
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-infos 
+{ 
+    
+    margin-top      :   50px; 
+    display         :   flex;
+    justify-content : center;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-infos div#geolocator__main-infos__center 
+{
+
+    padding          :                 10px 25px;
+    background-color :             var(--f-dark);
+    box-shadow       : 0px 0px 3px var(--f-dark);
+    border-radius    :                       3px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-infos div#geolocator__main-infos__center div.geolocator__main-infos__center-info 
+{
+
+    padding          :                 10px 15px;
+    width            :                     420px;
+    background-color :             var(--t-dark);
+    box-shadow       : 0px 0px 3px var(--t-dark);
+    border-radius    :                       3px;
+    display          :                      flex;
+    justify-content  :             space-between;
+    align-items      :                    center;
+    margin           :                  15px 0px;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-infos div#geolocator__main-infos__center div.geolocator__main-infos__center-info div.geolocator__main-infos__center-info__icon 
+{
+
+    width           :   30px;
+    display         :   flex;
+    justify-content : center;
+
+}
+
+section#geolocator main#geolocator__main div#geolocator__main-infos div#geolocator__main-infos__center div.geolocator__main-infos__center-info p 
+{
+
+    font-size :               9pt;
+    color     : var(--text-color);
+    opacity   :               0.6;
+
+}
+
+div#system_failure 
+{ 
+    
+    padding          :                  10px 50px; 
+    background-color :   rgba(244, 95, 95, 0.6);
+    box-shadow       : 0px 0px 3px var(--failure);
+
+}
+
+div#system_failure p 
+{
+
+    font-size  :               9pt;
+    color      : var(--text-color);
+    text-align :            center;
+
+}
